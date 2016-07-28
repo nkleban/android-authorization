@@ -1,6 +1,6 @@
 package net.intellectsoft.authorization.data;
 
-public interface ApiConstants {
+public interface AuthorizationApiConstants {
 
     String BASE_API_PATH = "api/v1/";
 

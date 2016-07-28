@@ -16,14 +16,14 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
 
-public class RetrofitAuthApi implements AuthorizationApi {
+public class RetrofitAuthorizationApi implements AuthorizationApi {
 
     protected final String baseUrl;
     protected final AuthorizationService authService;
     protected final TokenInterceptor tokenInterceptor;
     protected final Gson gson;
 
-    public RetrofitAuthApi(String baseUrl, Gson gson, TokenInterceptor tokenInterceptor) {
+    public RetrofitAuthorizationApi(String baseUrl, Gson gson, TokenInterceptor tokenInterceptor) {
         this.baseUrl = baseUrl;
         this.gson = gson;
         this.tokenInterceptor = tokenInterceptor;

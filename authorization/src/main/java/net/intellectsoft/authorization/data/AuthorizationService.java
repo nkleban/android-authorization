@@ -11,21 +11,21 @@ import rx.Observable;
 public interface AuthorizationService {
 
     @FormUrlEncoded
-    @POST(ApiConstants.LOGIN_PATH)
+    @POST(AuthorizationApiConstants.LOGIN_PATH)
     Observable<LoginResponse> login(@Field("email") String email,
                                     @Field("password") String password);
 
-    @DELETE(ApiConstants.LOGOUT_PATH)
+    @DELETE(AuthorizationApiConstants.LOGOUT_PATH)
     Observable<Void> logout();
 
     @FormUrlEncoded
-    @POST(ApiConstants.REGISTRATION_PATH)
+    @POST(AuthorizationApiConstants.REGISTRATION_PATH)
     Observable<Void> registration(@Field("email") String email,
                                   @Field("password") String password,
                                   @Field("first_name") String firstName,
                                   @Field("last_name") String lastName);
 
-    @POST(ApiConstants.RESTORE_PASS_PATH)
+    @POST(AuthorizationApiConstants.RESTORE_PASS_PATH)
     Observable<Void> restorePassword(@Field("email") String email);
 
 }
