@@ -9,8 +9,10 @@ import net.intellectsoft.authorization.domain.AuthorizationApi;
 
 import javax.inject.Singleton;
 
+import dagger.Module;
 import dagger.Provides;
 
+@Module
 public class AuthorizationModule {
 
     private final String baseUrl;
